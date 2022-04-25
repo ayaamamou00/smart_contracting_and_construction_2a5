@@ -4,7 +4,7 @@
 #include <QtSql>
 #include <QSqlDatabase>
 #include "materiels.h"
-
+#include "arduino.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -17,37 +17,14 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-private slots:
-    void on_pushButton_clicked();
 
-    void on_pushButton_4_clicked();
-
-       void  on_pushButton_20_clicked ();
-
-
-       void on_pushButton_6_clicked();
-
-       void on_pushButton_TriASC_clicked();
-       void on_pushButton_TriDESC_clicked();
-
-
-
-
-
-       void on_pushButton_2_clicked();
-
-       void on_pushButton_3_clicked();
-
-
-       void on_pushButton_5_clicked();
 
 private:
     Ui::MainWindow *ui;
-    materiels tmpmateriels;
 
 
-signals:
-    void setCenter(QVariant, QVariant);
-    void addMarker(QVariant, QVariant);
+private slots:
+    void on_pushButton_clicked();
+    void on_pushButton_2_clicked();
 };
 #endif // MAINWINDOW_H
