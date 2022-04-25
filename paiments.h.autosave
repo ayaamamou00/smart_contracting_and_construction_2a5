@@ -1,0 +1,43 @@
+#ifndef paiements_H
+#define paiements_H
+
+#include <QString>
+#include <iostream>
+#include <QSqlQueryModel>
+
+class paiements
+{
+public:
+    paiements();
+    paiements(int,QString,QString,QString,QString);
+    int get_id_don();
+    QString get_nom_donateur();
+    QString get_prenom_donateur();
+    QString get_type_don();
+    QString get_mail_donateur();
+
+    void set_id_don(int new_id){id_don=new_id;};
+    void set_nom_donateur(QString);
+    void set_prenom_donateur(QString);
+    void set_type_don(QString);
+    void set_mail_donateur(QString);
+
+
+    //CRUDs
+    bool ajouter();
+    QSqlQueryModel * afficher();
+    bool supprimer(int);
+    bool modifier(int);
+    //bool ChaineValide(QString);
+
+
+private:
+    int id_don;
+    QString nom_donateur;
+    QString prenom_donateur;
+    QString type_don;
+    QString mail_donateur;
+
+};
+
+#endif // paiements_H
