@@ -4,7 +4,7 @@
 #include <QtSql>
 #include <QSqlDatabase>
 #include "materiels.h"
-
+#include "arduino.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -44,8 +44,8 @@ private slots:
 private:
     Ui::MainWindow *ui;
     materiels tmpmateriels;
-
-
+    QByteArray data;
+    arduino a;
 signals:
     void setCenter(QVariant, QVariant);
     void addMarker(QVariant, QVariant);

@@ -21,6 +21,8 @@ public:
     int getid_mat();
     QString getfournisseur();
 bool ajouter_frn();
+bool ajouter_2(int);
+int rech_qt(int);
     bool ajouter();
     QSqlQueryModel * afficher();
     bool supprimer(int);

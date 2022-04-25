@@ -28,14 +28,17 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    int id_mat,prix_mat;
+    int id_mat,prix_mat,qt_ard=0;
             QString description_mat, nom_mat,fournisseur;
+            data =a.read_from_arduino();
+            if(data=="1")
+            {qt_ard ++;}
             id_mat=ui->lineEdit->text().toInt();
             prix_mat=ui->lineEdit_3->text().toInt();    
             description_mat=ui->lineEdit_4->text();
             nom_mat=ui->lineEdit_2->text();
             materiels m(id_mat,prix_mat,description_mat,nom_mat,fournisseur);
-            bool test=m.ajouter();
+            bool test=m.ajouter_2(qt_ard);
             cout<<test;
                      if(test)
                      {

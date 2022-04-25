@@ -81,6 +81,46 @@ bool materiels::ajouter()
             query.bindValue (":description_mat",description_mat);
             return query.exec();
 }
+
+
+bool materiels::ajouter_2(int qt)
+
+{
+    QSqlQuery query;
+
+    QString res =QString::number(id_mat);
+    QString i =QString::number(prix_mat);
+          // prepare () prend la requete en parametre pour la preparer a l execution.
+            query.prepare("insert into materiels (id_mat , nom_mat ,prix_mat ,description_mat,nb_mat)" "values(:id_mat ,:nom_mat ,:prix_mat ,:description_mat ,:nb)");
+    //creation des variables lieés
+    query.bindValue (":id_mat",res);
+     query.bindValue (":nom_mat",nom_mat);
+      query.bindValue (":prix_mat",i);
+            query.bindValue (":description_mat",description_mat);
+            query.bindValue (":nb",qt);
+            return query.exec();
+}
+
+int materiels::rech_qt(int id_mat)
+{
+
+    QString requette ="SELECT nb_mat FROM materiels WHERE id_mat='";
+       QString id = QString::number(id_mat);
+       requette = requette + id + "'";
+        QSqlQuery query(requette) ;
+
+           int s=0 ;
+
+        while(query.next())
+           {
+               s = query.value(0).toInt();
+           }
+               return  s ;
+
+
+}
+
+
 bool materiels ::supprimer (int id_mat)
 {
     QSqlQuery query;
