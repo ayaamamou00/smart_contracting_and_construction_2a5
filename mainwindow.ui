@@ -17,9 +17,9 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>0</y>
-      <width>1131</width>
+      <x>190</x>
+      <y>30</y>
+      <width>1221</width>
       <height>671</height>
      </rect>
     </property>
@@ -73,11 +73,12 @@
       <property name="font">
        <font>
         <pointsize>11</pointsize>
+        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
       <property name="title">
-       <string>Gestion chantiers</string>
+       <string>Gestion commandes</string>
       </property>
       <widget class="QLabel" name="label">
        <property name="geometry">
@@ -272,19 +273,6 @@ border-color:transparent;</string>
         </rect>
        </property>
       </widget>
-      <widget class="QPushButton" name="camera">
-       <property name="geometry">
-        <rect>
-         <x>140</x>
-         <y>220</y>
-         <width>191</width>
-         <height>81</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Camera</string>
-       </property>
-      </widget>
      </widget>
      <widget class="QPushButton" name="pb_afficher">
       <property name="geometry">
@@ -374,27 +362,17 @@ border-color:transparent;</string>
       </item>
       <item>
        <property name="text">
-        <string>NBRE CHAMBRE</string>
+        <string>nom</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>ETAGE</string>
+        <string>numero</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>SURFACE</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>BUDGET</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>JARDIN</string>
+        <string>type</string>
        </property>
       </item>
      </widget>
@@ -433,6 +411,7 @@ border-color:transparent;</string>
       <property name="font">
        <font>
         <pointsize>11</pointsize>
+        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -455,12 +434,12 @@ border-color:transparent;</string>
        </item>
        <item>
         <property name="text">
-         <string>nombre de chambre</string>
+         <string>nom</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>budget</string>
+         <string>type</string>
         </property>
        </item>
       </widget>
@@ -495,6 +474,7 @@ font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
       <property name="font">
        <font>
         <pointsize>22</pointsize>
+        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -514,6 +494,7 @@ font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
       <property name="font">
        <font>
         <pointsize>11</pointsize>
+        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -545,13 +526,14 @@ font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
         <rect>
          <x>10</x>
          <y>30</y>
-         <width>56</width>
+         <width>81</width>
          <height>16</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <pointsize>8</pointsize>
+         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -571,14 +553,29 @@ font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
        <property name="font">
         <font>
          <pointsize>8</pointsize>
+         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
        <property name="text">
-        <string>Nombre chambre:</string>
+        <string>nom:</string>
        </property>
       </widget>
      </widget>
+     <widget class="QPushButton" name="camera">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>150</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <zorder>camera</zorder>
      <zorder>le_supp</zorder>
      <zorder>tv_afficher</zorder>
      <zorder>groupBox</zorder>
@@ -648,7 +645,7 @@ font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>1799</width>
-     <height>22</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

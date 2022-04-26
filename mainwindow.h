@@ -1,7 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 #include <QMainWindow>
-#include "chantier.h"
+#include "commande.h"
 #include "agenda.h"
 #include <QPropertyAnimation>
 #include <QSortFilterProxyModel>

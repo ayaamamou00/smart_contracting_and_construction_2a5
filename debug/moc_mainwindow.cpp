@@ -167,20 +167,20 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 7: _t->on_trecherchec_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         //case 8: _t->on_trecherchec_2_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 9: _t->on_trecherchelt_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-       // case 10: _t->on_trecherchelt_3_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-       // case 11: _t->on_le_budget_editingFinished(); break;
+      //  case 10: _t->on_trecherchelt_3_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+      //  case 11: _t->on_le_budget_editingFinished(); break;
        // case 12: _t->on_le_jardin_editingFinished(); break;
        // case 13: _t->on_le_adresse_c_editingFinished(); break;
        // case 14: _t->on_sb_etage_editingFinished(); break;
        // case 15: _t->on_sb_chambre_editingFinished(); break;
         case 16: _t->on_toolButton_clicked(); break;
         case 17: _t->on_camera_clicked(); break;
-      //  case 18: _t->on_pushButton_clicked(); break;
+       // case 18: _t->on_pushButton_clicked(); break;
         case 19: _t->on_recherche_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        //case 20: _t->on_pushButton_2_clicked(); break;
+       // case 20: _t->on_pushButton_2_clicked(); break;
         case 21: _t->on_historique_clicked(); break;
-      //  case 22: _t->on_le_surface_c_editingFinished(); break;
-      //  case 23: _t->on_ajouter_clicked(); break;
+       // case 22: _t->on_le_surface_c_editingFinished(); break;
+       // case 23: _t->on_ajouter_clicked(); break;
         default: ;
         }
     }

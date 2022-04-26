@@ -7,7 +7,7 @@
 #include <QMessageBox>
 #include <QSortFilterProxyModel>
 #include <QPropertyAnimation>
-#include "chantier.h"
+#include "commande.h"
 #include "connection.h"
 #include "histo.h"
 #include <QQuickView>
@@ -28,7 +28,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    QPixmap bkgnd("C:/Users/khale/Desktop/m/chance/chantier/images/screen.jpg");
+    QPixmap bkgnd("C:/Users/Mahmoud/Desktop/m/chance/chantier/images/screen.jpg");
         bkgnd = bkgnd.scaled(1920,1080);
         QPalette palette;
         palette.setBrush(QPalette::Background, bkgnd);
@@ -237,60 +237,7 @@ void MainWindow::on_trecherchelt_textChanged(const QString &arg1)
 
 
 
-/*void MainWindow::on_le_jardin_editingFinished()
-{
-    QString val=ui->le_jardin->text();
-    if( (val!="oui")&&(val!="non"))
-      {  QMessageBox::critical(nullptr, QObject::tr("Not OK"),
-                    QObject::tr("JARDIN NON VALID \n"
-                                "Click Cancel to exit."), QMessageBox::Cancel);
-    }
 
-
-}*/
-
-
-
-/*void MainWindow::on_sb_etage_editingFinished()
-{
-    int val=ui->sb_etage->text().toInt();
-    if (val<=0)
-      {  QMessageBox::critical(nullptr, QObject::tr("Not OK"),
-                    QObject::tr("NOMBRE ETAGE NON VALID \n"
-                                "Click Cancel to exit."), QMessageBox::Cancel);
-    }
-
-}
-
-void MainWindow::on_sb_chambre_editingFinished()
-{
-    int val=ui->sb_chambre->text().toInt();
-    if (val<=0)
-      {  QMessageBox::critical(nullptr, QObject::tr("Not OK"),
-                    QObject::tr("NOMBRE CHAMBRE NON VALID \n"
-                                "Click Cancel to exit."), QMessageBox::Cancel);
-    }
-}
-
-void MainWindow::on_le_budget_editingFinished()
-{
-    int val=ui->le_budget->text().toFloat();
-    if (val<=0)
-      {  QMessageBox::critical(nullptr, QObject::tr("Not OK"),
-                    QObject::tr("NOMBRE ETAGE NON VALID \n"
-                                "Click Cancel to exit."), QMessageBox::Cancel);
-    }
-}
-void MainWindow::on_le_surface_c_editingFinished()
-{
-    int val=ui->le_surface_c->text().toInt();
-    if (val<=0)
-      {  QMessageBox::critical(nullptr, QObject::tr("Not OK"),
-                    QObject::tr("Surface  NON VALID \n"
-                                "Click Cancel to exit."), QMessageBox::Cancel);
-    }
-}
-*/
 
 void MainWindow::on_toolButton_clicked()
 {
@@ -312,11 +259,7 @@ void MainWindow::on_toolButton_clicked()
 }
 
 
-void MainWindow::on_camera_clicked()
-{
-    cam=new camera(this);
-    cam->show();
-}
+
 void MainWindow::myfunction()
 {
     QTime time =QTime::currentTime();
@@ -351,3 +294,8 @@ void MainWindow::on_historique_clicked()
 }
 
 
+
+void MainWindow::on_camera_clicked()
+{
+
+}

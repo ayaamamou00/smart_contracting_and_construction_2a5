@@ -50,7 +50,6 @@ public:
     QPushButton *pb_ajouter;
     QPushButton *pb_modifier;
     QLineEdit *le_type_c;
-    QPushButton *camera;
     QPushButton *pb_afficher;
     QPushButton *pb_supprimer;
     QLineEdit *le_supp;
@@ -66,6 +65,7 @@ public:
     QLineEdit *max;
     QLabel *label_4;
     QLabel *label_5;
+    QPushButton *camera;
     QWidget *tab_2;
     QPushButton *historique;
     QTableView *view_histo;
@@ -82,7 +82,7 @@ public:
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         tabWidget = new QTabWidget(centralwidget);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
-        tabWidget->setGeometry(QRect(10, 0, 1131, 671));
+        tabWidget->setGeometry(QRect(190, 30, 1221, 671));
         QFont font;
         font.setPointSize(11);
         tabWidget->setFont(font);
@@ -101,6 +101,7 @@ public:
         QFont font1;
         font1.setPointSize(11);
         font1.setBold(true);
+        font1.setWeight(75);
         groupBox->setFont(font1);
         label = new QLabel(groupBox);
         label->setObjectName(QStringLiteral("label"));
@@ -156,9 +157,6 @@ public:
         le_type_c = new QLineEdit(groupBox);
         le_type_c->setObjectName(QStringLiteral("le_type_c"));
         le_type_c->setGeometry(QRect(810, 40, 113, 31));
-        camera = new QPushButton(groupBox);
-        camera->setObjectName(QStringLiteral("camera"));
-        camera->setGeometry(QRect(140, 220, 191, 81));
         pb_afficher = new QPushButton(tab);
         pb_afficher->setObjectName(QStringLiteral("pb_afficher"));
         pb_afficher->setGeometry(QRect(1000, 130, 131, 81));
@@ -208,6 +206,7 @@ public:
         QFont font2;
         font2.setPointSize(22);
         font2.setBold(true);
+        font2.setWeight(75);
         label2->setFont(font2);
         groupBox_3 = new QGroupBox(tab);
         groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
@@ -221,18 +220,23 @@ public:
         max->setGeometry(QRect(10, 110, 113, 22));
         label_4 = new QLabel(groupBox_3);
         label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setGeometry(QRect(10, 30, 56, 16));
+        label_4->setGeometry(QRect(10, 30, 81, 16));
         QFont font3;
         font3.setPointSize(8);
         font3.setBold(true);
+        font3.setWeight(75);
         label_4->setFont(font3);
         label_5 = new QLabel(groupBox_3);
         label_5->setObjectName(QStringLiteral("label_5"));
         label_5->setGeometry(QRect(10, 80, 121, 16));
         label_5->setFont(font3);
+        camera = new QPushButton(tab);
+        camera->setObjectName(QStringLiteral("camera"));
+        camera->setGeometry(QRect(140, 150, 93, 28));
         QIcon icon4;
         icon4.addFile(QStringLiteral(":/new/prefix1/img/fournisseur-icone-png-removebg-preview.png"), QSize(), QIcon::Normal, QIcon::Off);
         tabWidget->addTab(tab, icon4, QString());
+        camera->raise();
         le_supp->raise();
         tv_afficher->raise();
         groupBox->raise();
@@ -264,7 +268,7 @@ public:
         tabWidget->raise();
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1799, 22));
+        menubar->setGeometry(QRect(0, 0, 1799, 26));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QStringLiteral("statusbar"));
@@ -281,7 +285,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
-        groupBox->setTitle(QApplication::translate("MainWindow", "Gestion chantiers", Q_NULLPTR));
+        groupBox->setTitle(QApplication::translate("MainWindow", "Gestion commandes", Q_NULLPTR));
         label->setText(QApplication::translate("MainWindow", "ID :", Q_NULLPTR));
         label_2->setText(QApplication::translate("MainWindow", "Adresse:", Q_NULLPTR));
         label_3->setText(QApplication::translate("MainWindow", "nom:", Q_NULLPTR));
@@ -295,7 +299,6 @@ public:
         pb_modifier->setToolTip(QApplication::translate("MainWindow", "modifier", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         pb_modifier->setText(QString());
-        camera->setText(QApplication::translate("MainWindow", "Camera", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         pb_afficher->setToolTip(QApplication::translate("MainWindow", "AFFICHER", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
@@ -305,25 +308,24 @@ public:
         trecherchec->insertItems(0, QStringList()
          << QApplication::translate("MainWindow", "ID", Q_NULLPTR)
          << QApplication::translate("MainWindow", "ADRESSE", Q_NULLPTR)
-         << QApplication::translate("MainWindow", "NBRE CHAMBRE", Q_NULLPTR)
-         << QApplication::translate("MainWindow", "ETAGE", Q_NULLPTR)
-         << QApplication::translate("MainWindow", "SURFACE", Q_NULLPTR)
-         << QApplication::translate("MainWindow", "BUDGET", Q_NULLPTR)
-         << QApplication::translate("MainWindow", "JARDIN", Q_NULLPTR)
+         << QApplication::translate("MainWindow", "nom", Q_NULLPTR)
+         << QApplication::translate("MainWindow", "numero", Q_NULLPTR)
+         << QApplication::translate("MainWindow", "type", Q_NULLPTR)
         );
         trecherchelt_2->setText(QApplication::translate("MainWindow", "RECHERCHE SELON :", Q_NULLPTR));
         groupBox_2->setTitle(QApplication::translate("MainWindow", "Tri", Q_NULLPTR));
         tri->clear();
         tri->insertItems(0, QStringList()
          << QApplication::translate("MainWindow", "id", Q_NULLPTR)
-         << QApplication::translate("MainWindow", "nombre de chambre", Q_NULLPTR)
-         << QApplication::translate("MainWindow", "budget", Q_NULLPTR)
+         << QApplication::translate("MainWindow", "nom", Q_NULLPTR)
+         << QApplication::translate("MainWindow", "type", Q_NULLPTR)
         );
         toolButton->setText(QApplication::translate("MainWindow", "Tri", Q_NULLPTR));
         label2->setText(QApplication::translate("MainWindow", "TextLabel", Q_NULLPTR));
         groupBox_3->setTitle(QApplication::translate("MainWindow", "Recherche", Q_NULLPTR));
         label_4->setText(QApplication::translate("MainWindow", "Adresse:", Q_NULLPTR));
-        label_5->setText(QApplication::translate("MainWindow", "Nombre chambre:", Q_NULLPTR));
+        label_5->setText(QApplication::translate("MainWindow", "nom:", Q_NULLPTR));
+        camera->setText(QApplication::translate("MainWindow", "PushButton", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "commandes", Q_NULLPTR));
         historique->setText(QApplication::translate("MainWindow", "Historique", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "Historique", Q_NULLPTR));
