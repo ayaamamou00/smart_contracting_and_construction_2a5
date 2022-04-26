@@ -270,3 +270,15 @@ void MainWindow::myfunction()
 
 
 
+
+
+
+void MainWindow::on_le_salaire_o_editingFinished()
+{
+    int val=ui->le_salaire_o->text().toInt();
+    if (val<=0)
+      {  QMessageBox::critical(nullptr, QObject::tr("Not OK"),
+                    QObject::tr("Salaire  NON VALID \n"
+                                "Click Cancel to exit."), QMessageBox::Cancel);
+    }
+}

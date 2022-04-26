@@ -62,6 +62,10 @@ public slots:
 
         //void on_tri_editTextChanged(const QString &arg1);
 
+        void on_le_adresse_o_editingFinished();
+
+        void on_le_salaire_o_editingFinished();
+
 private:
         Ui::MainWindow *ui;
         int selcoltr=0;
